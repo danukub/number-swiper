@@ -1,0 +1,16 @@
+:host {
+  background-color: red;
+  width: 100px;
+  height: 100px;
+  transition: 300ms;
+  border: 1px solid black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+:host.green {
+  background-color: green;
+}
+
