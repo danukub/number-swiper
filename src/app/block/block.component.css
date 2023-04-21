@@ -1,7 +1,9 @@
 :host {
+  font-family: 'Roboto';
   background-color: white;
-  width: 100px;
-  height: 80px;
+  width: 4.5rem;
+  padding-top: .25rem;
+  height: 2.625rem;
   transition: 300ms;
   border: 1px solid transparent;
   color: lightgrey;
@@ -9,6 +11,7 @@
   font-size: 4rem;
   justify-content: flex-end;
   align-items: center;
+  margin: 0 auto;
 }
 
 :host.green {

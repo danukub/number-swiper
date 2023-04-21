@@ -6,7 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./number-swiper.component.css']
 })
 export class NumberSwiperComponent {
-  blocks = Array(99).fill(null).map((x, i) => i + 1);
-
+  
+  min: number = 0;
+  max: number = 99;
+  length: number = this.max + 1 - this.min;
   value?: number;
+  
+  blocks = Array(this.length).fill(null).map((x, index) => (index + this.min).toString().padStart(2, '0'));
 }
