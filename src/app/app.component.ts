@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild, ViewChildren } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +8,21 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'number-swiper';
 
-  blocks = Array(20).fill(null).map((x, i) => i + 1);
+ blocks = Array(99).fill(null).map((x, i) => i + 1);
 
+  el:HTMLElement;
+  value?: number;
+  constructor( el: ElementRef) { this.el = el.nativeElement
+  }
+
+  printValue() {
+    let a = this.el.getElementsByClassName("green");
+    a.item(0);
+
+
+    this.value = Number(a.item(0)?.textContent);
+
+    console.log(a.item(0)?.textContent);  
+  }
 
 }

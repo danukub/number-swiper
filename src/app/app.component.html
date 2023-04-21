@@ -1,7 +1,13 @@
-<number-swiper></number-swiper>
+<!-- <number-swiper></number-swiper> -->
 
 <div class="window">
   <app-block *ngFor="let block of blocks">
     {{ block }}
   </app-block>  
 </div>
+<div>
+  <button (click)="printValue()">get current value</button>
+</div>
+<div>
+{{value}}
+<div>

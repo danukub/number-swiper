@@ -1,4 +1,4 @@
-import { Component, ElementRef, HostBinding } from '@angular/core';
+import { Component, ElementRef, HostBinding, Output } from '@angular/core';
 
 @Component({
   selector: 'app-block',
@@ -10,15 +10,27 @@ export class BlockComponent {
   @HostBinding('class.green') isVisibleInView = false;
 
   private observer!: IntersectionObserver;
+  @Output() value: any;
 
-  constructor(private el: ElementRef) {
+  
 
+  constructor(public el: ElementRef) {
   }
 
   ngAfterViewInit() {
-    this.observer = new IntersectionObserver( entries => {
+    this.observer = new IntersectionObserver(entries => {
+
+      // console.log(entries);
+
+
+
       if ( entries[0].isIntersecting === true ) {
+        // console.log(this.el.nativeElement.innerText);
+
+
         this.isVisibleInView = true;
+
+        this.value = this.el.nativeElement.innerText;
 
         // Probably needs to be called in production
         //
@@ -35,6 +47,7 @@ export class BlockComponent {
 
     this.observer.observe(this.el.nativeElement as HTMLElement);
   }
+
 
   ngOnDestroy() {
     this.observer.disconnect();
