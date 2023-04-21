@@ -1,4 +1,6 @@
 import { Component, ElementRef, HostBinding, Output } from '@angular/core';
+import { AppComponent } from '../app.component';
+import { NumberSwiperComponent } from '../number-swiper/number-swiper.component';
 
 @Component({
   selector: 'app-block',
@@ -10,11 +12,8 @@ export class BlockComponent {
   @HostBinding('class.green') isVisibleInView = false;
 
   private observer!: IntersectionObserver;
-  @Output() value: any;
 
-  
-
-  constructor(public el: ElementRef) {
+  constructor(public el: ElementRef, private app: NumberSwiperComponent) {
   }
 
   ngAfterViewInit() {
@@ -26,11 +25,9 @@ export class BlockComponent {
 
       if ( entries[0].isIntersecting === true ) {
         // console.log(this.el.nativeElement.innerText);
-
-
         this.isVisibleInView = true;
 
-        this.value = this.el.nativeElement.innerText;
+        this.app.value = this.el.nativeElement.innerText;
 
         // Probably needs to be called in production
         //

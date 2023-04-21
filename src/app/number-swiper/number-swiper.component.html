@@ -1,56 +1,9 @@
-<div id="myNumberSwiper" class="number-swiper" data-value="">
-  <ol class="number-swiper-column number-swiper-column-2" data-column="2">
-    <li class="last-zero">0</li>
-    <li>1</li>
-    <li>2</li>
-    <li>3</li>
-    <li>4</li>
-    <li>5</li>
-    <li>6</li>
-    <li>7</li>
-    <li>8</li>
-    <li>9</li>
-    <li id="center-2" class="number-swiper-active-number">0</li>
-    <li>1</li>
-    <li>2</li>
-    <li>3</li>
-    <li>4</li>
-    <li>5</li>
-    <li>6</li>
-    <li>7</li>
-    <li>8</li>
-    <li>9</li>
-    <li class="last-zero">0</li>
-  </ol>
-  <ol class="number-swiper-column number-swiper-column-1" data-column="1">
-    <li class="last-zero">0</li>
-    <li>1</li>
-    <li>2</li>
-    <li>3</li>
-    <li>4</li>
-    <li>5</li>
-    <li>6</li>
-    <li>7</li>
-    <li>8</li>
-    <li>9</li>
-    <li id="center-1" class="number-swiper-active-number">0</li>
-    <li>1</li>
-    <li>2</li>
-    <li>3</li>
-    <li>4</li>
-    <li>5</li>
-    <li>6</li>
-    <li>7</li>
-    <li>8</li>
-    <li>9</li>
-    <li class="last-zero">0</li>
-  </ol>
-  <input class="number-swiper-value" type="hidden" min="0" max="99">
+<div class="window">
+  <app-block *ngFor="let block of blocks">
+    {{ block }}
+  </app-block>  
 </div>
 
-
-<script>
-  var numbers = new NumberSwiper('myNumberSwiper');
-</script>
-
-
+<div class="presenter">
+{{value}}
+<div>
