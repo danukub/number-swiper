@@ -3,7 +3,8 @@
   height: 4.5rem;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
-  margin: 10rem auto 6rem;
+  scroll-behavior: smooth;
+  margin: 8rem auto 6rem;
 }
 
 app-block {
