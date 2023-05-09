@@ -13,14 +13,16 @@ export class NumberSwiperComponent {
   max: number = 99;
   length: number = this.max + 1 - this.min;
   value?: number;
-  blocks: any;
+  blocks?: string[];
 
   inputValue: number = 0;
 
+  range(start: number, end: number): string[] {
+    return Array.from(Array(end - start + 1).keys()).map(x => (x + start).toString().padStart(2, '0'));
+  }
 
   ngOnInit() {
-    this.blocks = Array(this.length).fill(null).map((x, index) => (index + this.min).toString().padStart(2, '0'));
-    console.log(this.blocks[4])
+    this.blocks = this.range(this.min, this.max);
   }
 
   setValue(): void {
