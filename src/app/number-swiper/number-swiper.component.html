@@ -1,5 +1,5 @@
-<div class="window">
-  <app-block *ngFor="let block of blocks">
+<div #window class="window">
+  <app-block *ngFor="let block of blocks" [ngClass]="block">
     {{ block }}
   </app-block>  
 </div>
@@ -7,3 +7,8 @@
 <div class="presenter">
 {{value}}
 <div>
+
+<div class="input-panel">
+  <input type="tel" maxlength="2" [(ngModel)]="inputValue">
+  <button (click)="setValue()" >submit</button>
+</div>

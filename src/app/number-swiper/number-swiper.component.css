@@ -4,7 +4,7 @@
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
-  margin: 8rem auto 6rem;
+  margin: 4rem auto 2rem;
 }
 
 app-block {
@@ -34,7 +34,32 @@ app-block:last-of-type {
   border-radius: 3rem;
   font-size: 10rem;
   font-family: 'Roboto';
-  padding: 2rem;
+  padding: 1rem;
   text-align: right;
   width: 11rem;
+  height: 9rem;
+  line-height: 9rem;
+}
+
+.input-panel {
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  margin: 3rem auto;
+}
+
+.input-panel input {
+  width: 3rem;
+  text-align: right;
+  font-size: xx-large;
+  padding-right: .5rem;
+  margin-right: .5rem;
+  border-radius: .3rem;
+}
+
+.input-panel button {
+  border-radius: .3rem;
+  background: cornflowerblue;
+  color: white;
+  border-color: transparent;
 }
