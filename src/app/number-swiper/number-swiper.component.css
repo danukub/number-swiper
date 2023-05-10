@@ -4,7 +4,7 @@
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
-  margin: 4rem auto 2rem;
+  margin: 8rem auto 5rem;
 }
 
 app-block {
@@ -45,7 +45,7 @@ app-block:last-of-type {
   height: 3rem;
   display: flex;
   justify-content: center;
-  margin: 3rem auto;
+  margin: 6rem auto;
 }
 
 .input-panel input {
